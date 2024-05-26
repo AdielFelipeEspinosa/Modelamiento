@@ -5,19 +5,19 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Rol extends Model
+class Categoria extends Model
 {
     use HasFactory;
 
     public $timestamps = false;
 
-    protected $table = 'Roles';
+    protected $table = 'Categorias';
     
-    protected $primaryKey = "idRoles";
+    protected $primaryKey = "idCategorias";
     
 
-    public function Users()
+    public function Productos()
     {
-        return $this->hasMany(User::class, 'idUsers');
+        return $this->hasMany(Producto::class, 'idProductos');
     }
 }

@@ -15,9 +15,9 @@ use App\Models\User;
             <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3 py-lg-0 px-0">
                 <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                     <div class="navbar-nav mr-auto py-0">
-                        <a href="index.html" class="nav-item nav-link active">Inicio</a>
-                        <a href="shop.html" class="nav-item nav-link">Tienda</a>
-                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                        <a href="/" class="nav-item nav-link active">Inicio</a>
+                        <a href="{{route('shop')}}" class="nav-item nav-link">Tienda</a>
+                        <a href="#" class="nav-item nav-link">Contact</a>
                         @if (Auth::check())
 
                         @php
@@ -31,8 +31,8 @@ use App\Models\User;
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Admin <i class="fa fa-angle-down mt-1"></i></a>
                             <div class="dropdown-menu bg-primary rounded-0 border-0 m-0">
-                                <a href="cart.html" class="dropdown-item">Agregar Productos</a>
-                                <a href="checkout.html" class="dropdown-item">Agregar Roles</a>
+                                <a href="createShop" class="dropdown-item">Administrar Productos</a>
+                                <a href="/Rol" class="dropdown-item">Administrar Roles</a>
                             </div>
                         </div>
                         @break
@@ -41,7 +41,8 @@ use App\Models\User;
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Cliente <i class="fa fa-angle-down mt-1"></i></a>
                             <div class="dropdown-menu bg-primary rounded-0 border-0 m-0">
-                                <a href="cart.html" class="dropdown-item">Ver Carrito</a>
+                                <a href="#" class="dropdown-item">Opcion de Cliente 1</a>
+                                <a href="#" class="dropdown-item">Opcion de Cliente 2</a>
                             </div>
                         </div>
                         @break

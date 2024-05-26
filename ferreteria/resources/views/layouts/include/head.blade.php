@@ -14,4 +14,4 @@
 <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
 
 <!-- Customized Bootstrap Stylesheet -->
-<link href="css/style.css" rel="stylesheet">
+<link rel="stylesheet" href="{{asset('css/style.css') }}">
