@@ -5,7 +5,7 @@ use App\Models\User;
 
 <div class="container-fluid bg-dark mb-30" style="padding: 1%;">
     <div class="row px-xl-5">
-        <div class="col-lg-3 d-none d-lg-block">
+        <div class="col-lg-3 d-none d-lg-block" style="flex: 0 0 25%;">
             <a href="/" class="text-decoration-none" style="height: 6px;">
                 <span class="h1 text-uppercase text-primary bg-dark px-2">Ferre</span>
                 <span class="h1 text-uppercase text-dark bg-primary px-2 ml-n1">Teria</span>
@@ -31,7 +31,7 @@ use App\Models\User;
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Admin <i class="fa fa-angle-down mt-1"></i></a>
                             <div class="dropdown-menu bg-primary rounded-0 border-0 m-0">
-                                <a href="createShop" class="dropdown-item">Administrar Productos</a>
+                                <a href="/Producto" class="dropdown-item">Administrar Productos</a>
                                 <a href="/Rol" class="dropdown-item">Administrar Roles</a>
                             </div>
                         </div>

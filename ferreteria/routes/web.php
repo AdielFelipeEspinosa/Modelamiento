@@ -16,20 +16,19 @@ Route::post('postRegister',[AuthController::class, 'postRegister'])->name('postR
 Route::get('logout', [AuthController::class, 'logout'])->name('logout');
 
 
-Route::get('shop', [ProductoController::class, 'index'])->name('shop');
+Route::get('shop', [ProductoController::class, 'mostrar'])->name('shop');
+
 Route::middleware(['Admin'])->group(function () {
-    Route::get('createShop', [ProductoController::class, 'create'])->name('createShop');
-    Route::post('postProducto', [ProductoController::class, 'postProducto'])->name('postProducto');
+    Route::resource('Producto', ProductoController::class);
 });
 
 /*
 Route::middleware(['Admin'])->group(function () {
-    Route::get('rol', [RolController::class, 'index'])->name('rol');
-    Route::get('createRol', [RolController::class, 'create'])->name('createRol');
-    Route::post('editRol', [RolController::class, 'edit'])->name('editRol');
-    Route::post('uptadeRol', [RolController::class, 'update'])->name('uptadeRol');
-    Route::post('deleteRol', [RolController::class, 'destroy'])->name('deleteRol');
-});*/
+    Route::get('createShop', [ProductoController::class, 'create'])->name('createShop');
+    Route::post('postProducto', [ProductoController::class, 'postProducto'])->name('postProducto');
+});
+*/
+
 Route::middleware(['Admin'])->group(function () {
     Route::resource('Rol', RolController::class);
 });

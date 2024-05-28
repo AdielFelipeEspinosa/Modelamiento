@@ -19,7 +19,7 @@
                 </div>
 
                 <div class="py-5">
-                    <button type="submit" class="btn btn-block btn-primary font-weight-bold py-3">Actualizar Producto</button>
+                    <button type="submit" class="btn btn-block btn-primary font-weight-bold py-3">Actualizar Rol</button>
                 </div>
             </form>
         </div>
