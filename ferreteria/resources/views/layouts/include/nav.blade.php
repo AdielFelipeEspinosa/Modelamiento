@@ -33,6 +33,7 @@ use App\Models\User;
                             <div class="dropdown-menu bg-primary rounded-0 border-0 m-0">
                                 <a href="/Producto" class="dropdown-item">Administrar Productos</a>
                                 <a href="/Rol" class="dropdown-item">Administrar Roles</a>
+                                <a href="/User" class="dropdown-item">Administrar Usuarios</a>
                             </div>
                         </div>
                         @break
@@ -77,7 +78,7 @@ use App\Models\User;
                         <div class="btn-group">
                             <button type="button" class="btn btn-sm btn-light dropdown-toggle" data-toggle="dropdown">Cuenta</button>
                             <div class="dropdown-menu dropdown-menu-right">
-                                <a href=" "><button class="dropdown-item" type="button">{{$user->Nombres}}</button></a>
+                                <a href="{{ route('User.edit', ['User' => $user->idUsers]) }}"><button class="dropdown-item" type="button">{{$user->Nombres}}</button></a>
                                 <a href="{{route('logout')}}"><button class="dropdown-item" type="button">Salir</button></a>
 
                             </div>
