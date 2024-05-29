@@ -23,7 +23,8 @@ class Users extends Seeder
                 'Direccion' => 'Cra 15',
                 'password' => Hash::make('123'),
                 'Fecha_Registro' => now(),
-                'Roles_idRoles' => 1
+                'Roles_idRoles' => 1,
+                'Departamentos_idDepartamentos' => 1
             ],
             [
                 'Nombres' => 'Cristian',
@@ -33,7 +34,8 @@ class Users extends Seeder
                 'Direccion' => 'Cra 16',
                 'password' => Hash::make('123'),
                 'Fecha_Registro' => now(),
-                'Roles_idRoles' => 2
+                'Roles_idRoles' => 2,
+                'Departamentos_idDepartamentos' => 1
             ]
         ];
 

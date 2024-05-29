@@ -34,6 +34,8 @@ use App\Models\User;
                                 <a href="/Producto" class="dropdown-item">Administrar Productos</a>
                                 <a href="/Rol" class="dropdown-item">Administrar Roles</a>
                                 <a href="/User" class="dropdown-item">Administrar Usuarios</a>
+                                <a href="/Municipio" class="dropdown-item">Administrar Municipios</a>
+                                <a href="/Departamento" class="dropdown-item">Administrar Departamentos</a>
                             </div>
                         </div>
                         @break

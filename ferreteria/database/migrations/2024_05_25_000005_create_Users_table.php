@@ -32,11 +32,19 @@ class CreateUsersTable extends Migration
             $table->string('password', 200);
             $table->dateTime('Fecha_Registro');
             $table->integer('Roles_idRoles')->unsigned()->default(2);
+            $table->integer('Departamentos_idDepartamentos')->unsigned();
 
 
 
-            $table->foreign('Roles_idRoles','Roles_idRoles')
+
+
+            $table->foreign('Roles_idRoles', 'Roles_idRoles')
                 ->references('idRoles')->on('Roles')
+                ->onDelete('cascade')
+                ->onUpdate('cascade');
+
+            $table->foreign('Departamentos_idDepartamentos', 'Departamentos_idDepartamentos')
+                ->references('idDepartamentos')->on('Departamentos')
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
         });

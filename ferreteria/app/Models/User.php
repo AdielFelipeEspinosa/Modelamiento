@@ -22,4 +22,9 @@ class User extends Authenticatable
     {
         return $this->belongsTo(Rol::class, 'Roles_idRoles');
     }
+
+    public function Departamento()
+    {
+        return $this->belongsTo(Departamento::class, 'Departamentos_idDepartamentos');
+    }
 }

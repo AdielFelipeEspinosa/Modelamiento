@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\DepartamentoController;
+use App\Http\Controllers\MunicipioController;
 use App\Http\Controllers\ProductoController;
 use App\Http\Controllers\RolController;
 use App\Http\Controllers\UserController;
@@ -25,10 +27,9 @@ Route::get('shop', [ProductoController::class, 'mostrar'])->name('shop');
 
 Route::middleware(['Admin'])->group(function () {
     Route::resource('Producto', ProductoController::class);
-});
-
-Route::middleware(['Admin'])->group(function () {
     Route::resource('Rol', RolController::class);
+    Route::resource('Municipio', MunicipioController::class);
+    Route::resource('Departamento', DepartamentoController::class);
 });
 
 Route::middleware(['Cliente'])->group(function () {

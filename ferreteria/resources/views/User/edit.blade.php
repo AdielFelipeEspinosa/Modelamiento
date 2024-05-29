@@ -56,6 +56,18 @@ use App\Models\User;
                     <span class="text-danger">{{$errors->first('Direccion') }}</span>
                     @endif
                 </div>
+                
+                <div class="form-floating mb-3">
+                    <select class="form-select" id="Roles_idRoles" name="Roles_idRoles">
+                        <option value="{{ $user->Departamento_idDepartamento }}" selected>{{ $user->Departamento->Nombre }}</option>
+                        @foreach($departamentos as $departamento)
+                        @if($departamento->idDepartamentos != $user->Departamentos_idDepartamentos)
+                        <option value="{{ $departamento->idDepartamentos }}">{{ $departamento->Nombre }}</option>
+                        @endif
+                        @endforeach
+                    </select>
+                    <label for="floatingSelect">Departamento</label>
+                </div>
 
 
                 <div class="form-floating mb-3">
@@ -68,17 +80,17 @@ use App\Models\User;
 
 
                 @if (Auth::check() && Auth::user()->Roles_idRoles == 1)
-                    <div class="form-floating mb-3">
-                        <select class="form-select" id="Roles_idRoles" name="Roles_idRoles">
-                            <option value="{{ $user->Roles_idRoles }}" selected>{{ $user->Roles->Nombre }}</option>
-                            @foreach($roles as $rol)
-                                @if($rol->idRoles != $user->Roles_idRoles)
-                                    <option value="{{ $rol->idRoles }}">{{ $rol->Nombre }}</option>
-                                @endif
-                            @endforeach
-                        </select>
-                        <label for="floatingSelect">Roles</label>
-                    </div>
+                <div class="form-floating mb-3">
+                    <select class="form-select" id="Roles_idRoles" name="Roles_idRoles">
+                        <option value="{{ $user->Roles_idRoles }}" selected>{{ $user->Roles->Nombre }}</option>
+                        @foreach($roles as $rol)
+                        @if($rol->idRoles != $user->Roles_idRoles)
+                        <option value="{{ $rol->idRoles }}">{{ $rol->Nombre }}</option>
+                        @endif
+                        @endforeach
+                    </select>
+                    <label for="floatingSelect">Roles</label>
+                </div>
                 @endif
 
 

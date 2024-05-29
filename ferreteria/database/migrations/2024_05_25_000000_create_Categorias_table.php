@@ -23,7 +23,7 @@ class CreateCategoriasTable extends Migration
     {
         Schema::create($this->tableName, function (Blueprint $table) {
             $table->engine = 'InnoDB';
-            $table->increments('idCategorias');
+            $table->increments('idCategorias')->primary();
             $table->string('Nombre', 45);
         });
     }

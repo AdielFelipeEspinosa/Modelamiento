@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Departamento;
 use App\Models\Rol;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -34,7 +35,8 @@ class UserController extends Controller
     {
         $user = User::find($id);
         $roles = Rol::all();
-        return view('User.edit', compact('user','roles'));
+        $departamentos = Departamento::all();
+        return view('User.edit', compact('user','roles','departamentos'));
     }
 
     public function update(Request $request, string $id)

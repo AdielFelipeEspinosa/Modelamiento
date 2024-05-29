@@ -51,6 +51,16 @@
                     @endif
                 </div>
 
+                <div class="form-floating mb-3">
+                    <select class="form-select" id="Departamentos_idDepartamento" name="Departamentos_idDepartamento" aria-label="Floating label select example">
+                        <option selected>Seleccione su Departamento</option>
+                        @foreach($departamentos as $departamento)
+                        <option value="{{$departamento->idDepartamentos}}">{{$departamento->Nombre}}</option>
+                        @endforeach
+                    </select>
+                    <label for="floatingSelect">Departamento</label>
+                </div>
+
 
                 <div class="form-floating mb-3">
                     <input type="password" class="form-control" id="password" name="password" placeholder="Password">
@@ -68,6 +78,8 @@
                     <span class="text-danger">{{$errors->first('password_confirmation') }}</span>
                     @endif
                 </div>
+
+
 
 
                 <div class="py-5">

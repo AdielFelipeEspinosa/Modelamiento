@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Departamento;
 use App\Models\User;
 
 use Illuminate\Http\Request;
@@ -19,7 +20,8 @@ class AuthController extends Controller
 
     public function indexRegister()
     {
-        return view('auth.register');
+        $departamentos = Departamento::all();
+        return view('auth.register', compact('departamentos'));
     }
 
     public array $rules = [
@@ -29,7 +31,8 @@ class AuthController extends Controller
         'Celular' => 'required',
         'Direccion' => 'required',
         'password' => 'required|min:8',
-        'password_confirmation' => 'required|same:password'//Verificar si el campo de contraseña es el mismo
+        'password_confirmation' => 'required|same:password',//Verificar si el campo de contraseña es el mismo
+        'Departamentos_idDepartamento' => 'required'
     ];
 
     public function postRegister(Request $request)
@@ -43,6 +46,7 @@ class AuthController extends Controller
         $user->Correo = $request->Correo;
         $user->Celular = $request->Celular;
         $user->Direccion = $request->Direccion;
+        $user->Departamentos_idDepartamento = $request->Departamentos_idDepartamento;
         $user->password = Hash::make($request->password);
         $user->Fecha_Registro = now();
 
