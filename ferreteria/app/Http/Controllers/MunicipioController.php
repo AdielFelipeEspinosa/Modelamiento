@@ -35,7 +35,7 @@ class MunicipioController extends Controller
 
         $municipio->save();
 
-        return redirect()->route('Municipio.index')->withSuccess('Municipio Creado Correctamente :D');
+        return redirect()->route('Municipio.index')->withSuccess('Departamento Creado Correctamente :D');
     }
 
     public function edit(string $id)
@@ -55,13 +55,13 @@ class MunicipioController extends Controller
 
         $municipio->save();
 
-        return redirect()->route('Municipio.index')->withSuccess('Municipio Actualizado Correctamente :D');
+        return redirect()->route('Municipio.index')->withSuccess('Departamento Actualizado Correctamente :D');
     }
 
     public function destroy(string $id)
     {
         $municipio = Municipio::find($id);
         $municipio->delete();
-        return redirect('/Municipio')->withSuccess('Municipio Eliminado Correctamente :D');
+        return redirect('/Municipio')->withSuccess('Departamento Eliminado Correctamente :D');
     }
 }

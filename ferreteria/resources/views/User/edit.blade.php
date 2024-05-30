@@ -66,7 +66,7 @@ use App\Models\User;
                         @endif
                         @endforeach
                     </select>
-                    <label for="floatingSelect">Departamento</label>
+                    <label for="floatingSelect">Municipio</label>
                 </div>
 
 

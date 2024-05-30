@@ -1,16 +1,16 @@
 @extends('layouts.include')
 @section('content')
 
-<h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span class="bg-secondary pr-3">Departamentos</span></h2>
+<h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span class="bg-secondary pr-3">Municipios</span></h2>
 <div style="padding: 4%;">
-    <a href="{{ route('Departamento.create') }}" class="btn btn-primary" >Crear Departamentos</a>
+    <a href="{{ route('Departamento.create') }}" class="btn btn-primary" >Crear Municipio</a>
 </div>
 <div class="container">
     <table class="table">
         <thead class="thead-dark">
             <tr>
                 <th scope="col">id</th>
-                <th scope="col">Departamento</th>
+                <th scope="col">Municipio</th>
                 <th scope="col" class="text-right" style="padding-right: 4%;">Opciones</th>
             </tr>
         </thead>

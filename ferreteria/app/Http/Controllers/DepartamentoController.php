@@ -39,7 +39,7 @@ class DepartamentoController extends Controller
 
         $departamento->save();
 
-        return redirect()->route('Departamento.index')->withSuccess('Departamento Creado Correctamente :D');
+        return redirect()->route('Departamento.index')->withSuccess('Municipio Creado Correctamente :D');
     }
 
     public function edit(string $id)
@@ -61,13 +61,13 @@ class DepartamentoController extends Controller
 
         $departamento->save();
 
-        return redirect()->route('Departamento.index')->withSuccess('Departamento Actualizado Correctamente :D');
+        return redirect()->route('Departamento.index')->withSuccess('Municipio Actualizado Correctamente :D');
     }
 
     public function destroy(string $id)
     {
         $departamento = Departamento::find($id);
         $departamento->delete();
-        return redirect('/Departamento')->withSuccess('Departamento Eliminado Correctamente :D');
+        return redirect('/Departamento')->withSuccess('Municipio Eliminado Correctamente :D');
     }
 }

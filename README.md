@@ -1,10 +1,9 @@
-# Modelamiento
+# Pasos para correr la pagina
 
-composer install
-npm install
-
-Al importar migraciones eliminar "namespace Database\Migrations;"
-Para traducir mensajes de error hay que buscar el archivo "validation.php"
-
-php artisan make:model User -mcr //Crea Modelo Migracion y Controlador
-php artisan make:controller User -r //Crea controlador para una crud
+1. Tener instalado Xampp   
+2. Tener instalado Composer
+3. Encender Apacha y MySql
+4. Entrar a la carpeta ferretereia en un CMD
+5. Escribir "php artisan migrate:fresh --seed" en el CMD
+6. Escribir "php artisan serve" en el CMD
+7. Darle click al link "http://127.0.0.1:8000"

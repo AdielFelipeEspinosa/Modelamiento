@@ -2,7 +2,7 @@
 @section('content')
 
 <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span class="bg-secondary pr-3">Roles</span></h2>
-<div style="padding-left: 3%;">
+<div style="padding: 4%;">
     <a href="{{ route('Rol.create') }}" class="btn btn-primary ">Crear Roles</a>
 </div>
 <div class="container">

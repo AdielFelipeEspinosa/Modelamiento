@@ -8,7 +8,7 @@
                 @csrf
                 @method('PUT')
 
-                <h1 class="text-center">Municipios</h1>
+                <h1 class="text-center">Departamento</h1>
 
                 <div class="form-floating mb-3">
                     <input type="text" class="form-control" id="Nombre" name="Nombre" value="{{ old('Nombre', $municipio->Nombre) }}">
@@ -19,7 +19,7 @@
                 </div>
 
                 <div class="py-5">
-                    <button type="submit" class="btn btn-block btn-primary font-weight-bold py-3">Actualizar Municipio</button>
+                    <button type="submit" class="btn btn-block btn-primary font-weight-bold py-3">Actualizar Departamento</button>
                 </div>
             </form>
         </div>

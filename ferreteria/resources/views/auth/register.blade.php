@@ -52,13 +52,13 @@
                 </div>
 
                 <div class="form-floating mb-3">
-                    <select class="form-select" id="Departamentos_idDepartamento" name="Departamentos_idDepartamento" aria-label="Floating label select example">
-                        <option selected>Seleccione su Departamento</option>
+                    <select class="form-select" id="Departamentos_idDepartamentos" name="Departamentos_idDepartamentos" aria-label="Floating label select example">
+                        <option selected>Seleccione su Municipio</option>
                         @foreach($departamentos as $departamento)
                         <option value="{{$departamento->idDepartamentos}}">{{$departamento->Nombre}}</option>
                         @endforeach
                     </select>
-                    <label for="floatingSelect">Departamento</label>
+                    <label for="floatingSelect">Municipio</label>
                 </div>
 
 

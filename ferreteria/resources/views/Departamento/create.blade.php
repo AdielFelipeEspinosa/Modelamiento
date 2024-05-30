@@ -7,7 +7,7 @@
             <form class="mt-4" method="POST" action="/Departamento">
                 @csrf
 
-                <h1 class="text-center">Departamento</h1>
+                <h1 class="text-center">Municipio</h1>
 
                 <div class="form-floating mb-3">
                     <input type="text" class="form-control" id="Nombre" name="Nombre">
@@ -19,16 +19,16 @@
 
                 <div class="form-floating">
                     <select class="form-select" id="Municipios_idMunicipios" name="Municipios_idMunicipios" aria-label="Floating label select example">
-                        <option selected>Seleccione su Municipio</option>
+                        <option selected>Seleccione su Departamento</option>
                         @foreach($municipios as $municipio)
                         <option value="{{$municipio->idMunicipios}}">{{$municipio->Nombre}}</option>
                         @endforeach
                     </select>
-                    <label for="floatingSelect">Municipios</label>
+                    <label for="floatingSelect">Departamento</label>
                 </div>
 
                 <div class="py-5">
-                    <button type="submit" class="btn btn-block btn-primary font-weight-bold py-3">Crear Departamento</button>
+                    <button type="submit" class="btn btn-block btn-primary font-weight-bold py-3">Crear Municipio</button>
                 </div>
             </form>
         </div>

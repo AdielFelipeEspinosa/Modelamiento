@@ -19,7 +19,7 @@
                         </select>
                     </div>
                     <div class="btn-group">
-                        <input type="text" class="from-control" name="texto" value="{{$texto}}" placeholder="Buscar Producto">
+                        <input type="text" class="from-control" name="texto" value="{{$texto}}" placeholder="Buscar por Nombre">
                         <input type="submit" class="btn btn-primary " value="Buscar">
                     </div>
                 </div>

@@ -32,7 +32,7 @@ class AuthController extends Controller
         'Direccion' => 'required',
         'password' => 'required|min:8',
         'password_confirmation' => 'required|same:password',//Verificar si el campo de contraseña es el mismo
-        'Departamentos_idDepartamento' => 'required'
+        'Departamentos_idDepartamentos' => 'required'
     ];
 
     public function postRegister(Request $request)
@@ -46,7 +46,7 @@ class AuthController extends Controller
         $user->Correo = $request->Correo;
         $user->Celular = $request->Celular;
         $user->Direccion = $request->Direccion;
-        $user->Departamentos_idDepartamento = $request->Departamentos_idDepartamento;
+        $user->Departamentos_idDepartamentos = $request->Departamentos_idDepartamentos;
         $user->password = Hash::make($request->password);
         $user->Fecha_Registro = now();
 
